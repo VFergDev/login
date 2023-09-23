@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import NormalUser from "../components/NormalUser";
-import Mod from "../components/Mod";
-import Admin from "../components/Admin";
+import NormalUser from "../roles/NormalUser";
+import Mod from "../roles/Mod";
+import Admin from "../roles/Admin";
 
 const Main = () => {
   const [role, setRole] = useState("visitor");
@@ -30,9 +30,9 @@ const Main = () => {
 
   return (
     <div>
-      {role == "visitor" && <NormalUser />}
-      {role == "mod" && <Mod />}
-      {role == "admin" && <Admin />}
+      {role === "visitor" && <NormalUser />}
+      {role === "mod" && <Mod />}
+      {role === "admin" && <Admin />}
     </div>
   );
 };
